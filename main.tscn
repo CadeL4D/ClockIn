@@ -1,0 +1,57 @@
+[gd_scene load_steps=2 format=3 uid="uid://cup1iy8lovpp6"]
+
+[ext_resource type="Script" uid="uid://dx0jywg2ah4s6" path="res://main.gd" id="1_ig7tw"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ig7tw")
+
+[node name="time" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.406
+offset_left = 335.0
+offset_top = 355.0
+offset_right = -357.0
+offset_bottom = -304.52
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 100
+text = "00:00:00"
+horizontal_alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="clockin" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.347
+anchor_right = 0.5
+anchor_bottom = 0.479
+offset_left = 87.0
+offset_top = 59.76
+offset_right = -69.0
+offset_bottom = -43.6801
+theme_override_font_sizes/font_size = 50
+text = "Clock In"
+
+[node name="clockout" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.346
+anchor_right = 0.971
+anchor_bottom = 0.5
+offset_left = 12.0
+offset_top = 65.68
+offset_right = -112.68
+offset_bottom = -80.0
+theme_override_font_sizes/font_size = 50
+text = "Clock Out"
+
+[connection signal="pressed" from="clockin" to="." method="_on_clockin_pressed"]
